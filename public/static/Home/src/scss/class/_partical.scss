@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+.container {
+	width: $basewidth;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// 浮动
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+.clearfix {
+	&:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+.row {
+	@extend .clearfix;
+}
+// 字体
+$wordPos:left center right ;
+@each $pos in $wordPos {
+	.text-#{$pos} {
+		text-align: $pos;
+	}
+}
+
+// 颜色
+.bg-gray {
+	background-color: $gray;
+}
+// 列表
+.list-inline {
+	@include list-unstyle;
+	@include clearfix;
+	& > li {
+		float: left;
+	}
+}
+.list-inline-5 {
+	&>li {
+		width: 20%;
+	}
+}
+
+// 媒体
+.media {
+	overflow: hidden;
+	&_img {
+		display: block;
+	}
+	&_sd {
+		float: left;
+		margin-right: 10px;
+	}
+	&_mn {
+		overflow: hidden;
+	}
+	&_ct {
+		font-size: 80%;
+	}
+}
+

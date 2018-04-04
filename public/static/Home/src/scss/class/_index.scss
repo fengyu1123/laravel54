@@ -1,0 +1,131 @@
+
+
+.top {
+	line-height: 40px;
+}
+
+.nav {
+	@include list-unstyle;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	background-color: $blue;
+	&_item {
+		float: left;
+	}
+	&_link {
+		display: block;
+		padding: 0 30px;
+		&:hover {
+			background-color: darken($blue,10%);
+		}
+	}
+}
+.footer {
+	padding: 10px 0;
+	background-color: $gray;
+	text-align: center;
+	line-height: 30px;
+}
+
+.plate {
+	float: left;
+	width: 50%;
+	margin: $basemargin 0;
+	padding-right: 100px;
+	&_item {
+		line-height: 30px;
+	}
+	&_hd {
+		border-left: 5px solid $blue;
+		padding-left: 10px;
+		line-height: 36px;
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+	&_more {
+		float: right;
+		font-size: 16px;
+		color: $text-gray;
+	}
+	&_bd {
+		list-style: none;
+		margin: 0;
+		padding-left: 20px;
+	}
+}
+.carousel {
+	height: 320px;
+
+	.swiper-container {
+		height: 100%;
+	}
+
+	img {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+}
+.palte-hot {
+	height: 320px;
+	.plate_item {
+		position: relative;
+		padding-left: 30px;
+		@include text-overflow;
+		&:nth-of-type(-n+3){
+			&:before {
+				background-color: $red;
+				color: #fff;
+			}
+		}
+		&:before {
+			content: attr(data-num);
+			position: absolute;
+			$w: 24px;
+			left: 0;
+			top: 50%;
+			margin-top: -$w/2;
+			width: $w;
+			height: $w;
+
+			line-height: $w;
+
+			text-align: center;
+			border-radius: 3px;
+			background-color: $gray;
+			color: $text-gray;
+		}
+	}
+}
+.plate-line {
+	.plate_item {
+		@include text-overflow;
+	}
+}
+.plate-media {
+	.media {
+		height: 90px;
+		margin-bottom: 10px;
+	}
+	.media_img {
+		width: 90px;
+		height: 90px;
+	}
+	.media_ct {
+		@include text-overflow-line(2);
+	}
+}
+
+.banner {
+	@include clearfix;
+	@include list-unstyle;
+	&_item {
+		float: left;
+		width: 20%;
+		padding: 0 10px;
+		img {
+			width: 100%;
+		}
+	}
+}

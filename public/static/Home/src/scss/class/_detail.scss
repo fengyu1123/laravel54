@@ -1,0 +1,60 @@
+.main {
+	width: 700px;
+	float: left;
+	margin-right: $basemargin*4;
+}
+.aside {
+	overflow: hidden;
+}
+.news {
+	&_ct {
+		padding: $basepadding*2 0;
+		line-height: 30px;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+.form-comment {
+	border: $baseborder;
+	border-radius: 4px;
+	textarea {
+		display: block;
+		width: 100%;
+		height: 8em;
+		border: none;
+		padding: 5px 10px ;
+	}
+	.form_action {
+		border-top: $baseborder;
+		padding: 10px;
+	}
+	.form_submit {
+		border: none;
+		background-color: $blue;
+		color: #fff;
+		padding: 5px 10px;
+		border-radius: 4px;
+	}
+}
+
+.comment {
+	padding: $basepadding*2 0;
+	.media {
+		border-bottom: $baseborder;
+		margin-bottom: 10px;
+		padding: 5px 0;
+		.media_img {
+			width: 60px;
+			height: 60px;
+			border-radius: (50%);
+		}
+	}
+}
+
+
+.plate-side {
+	width: 100%;
+	padding-right: 0;
+}
